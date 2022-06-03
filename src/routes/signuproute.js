@@ -8,11 +8,11 @@ signupRouter.get('/',function(req,res){
     
 })
 
-signupRouter.get("/adduser",function(req,res){
-    
+signupRouter.post("/adduser",function(req,res){//part #2 point #10
+   
     var newuser = {
-        "uid":req.param("uid"),
-        "pwd":req.param("pwd")
+        "uid":req.body.uid,//part #2 point #10
+        "pwd":req.body.pwd//part #2 point #10
     };
     console.log(newuser);
     user.push(newuser);

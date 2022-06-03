@@ -9,6 +9,6 @@ const AuthorSchema = new Schema({
     about: String
 });
 
-const authordata = mongoose.model('authordata',AuthorSchema);
+const authordata = mongoose.model('authordatas',AuthorSchema);
 
 module.exports = authordata;

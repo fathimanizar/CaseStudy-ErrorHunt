@@ -5,6 +5,9 @@ const bookdata = require('../model/BookModel');
 
 
 
+
+
+
 //router to render books page
 booksRouter.get('/',function(req,res){
 
@@ -68,7 +71,7 @@ booksRouter.post('/delete', function (req, res) {
 
     const id = req.body.id;  
 
-    bookdata.deleteOne({ _id: id })//part #2 point #9
+    bookdata.remove({ _id: id })
         .then(function () {
 
             res.redirect('/books')
@@ -96,7 +99,7 @@ booksRouter.post('/edit', function (req, res) {
 //router to update book
 booksRouter.post('/update', function (req, res) {
 
-    bookdata.findOneAndUpdate(req.body.id, req.body,{new:true, useFindAndModify:false} ,(err, data)=> {//part #2 point #9
+    bookdata.findByIdAndUpdate(req.body.id, { $set: req.body }, function (err, data) {
         if (err) {
             res.json({ status: "Failed" });
         }
@@ -109,8 +112,6 @@ booksRouter.post('/update', function (req, res) {
 
     }) 
 })
-
-
 
 
 

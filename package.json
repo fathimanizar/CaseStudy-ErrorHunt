@@ -12,6 +12,8 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
+     "start": "nodemon app.js",
+     "comment":"part #1 point #1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "aiswarya",

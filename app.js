@@ -1,18 +1,10 @@
 const express = require('express'); 
 const path = require ('path'); 
 const cors = require('cors'); // part#2 point#7
-const bodyParser =require ('body-parser');//part#1 point#1
-const mongoose= require('mongoose');//part#1 point#2
-
-const app = express(); 
+const bodyParser =require ('body-parser');//part#1 point#2
 
 
-mongoose.Promise=global.Promise;
-
-mongoose.connect('mongodb://localhost:27017/Library',{
-    useNewUrlParser:true, 
-    useUnifiedTopology:true
- });
+ const app = express(); 
 
 const nav= [
     {
@@ -32,6 +24,9 @@ const nav= [
         title:"Add Author"
     }
 ]
+
+
+
 
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');

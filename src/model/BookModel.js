@@ -10,6 +10,6 @@ const BookSchema = new Schema({
     about: String
 });
 
-const bookdata = mongoose.model('bookdata',BookSchema);
+const bookdata = mongoose.model('bookdatas',BookSchema);
 
 module.exports = bookdata;
