@@ -99,7 +99,7 @@ booksRouter.post('/edit', function (req, res) {
 //router to update book
 booksRouter.post('/update', function (req, res) {
 
-    bookdata.findOneAndUpdate(req.body.id, { $set: req.body },{ new: true, useFindAndModify: false }, function (err, data) {
+    bookdata.findOneAndUpdate(req.body.id, { $set: req.body },{ new: true, useFindAndModify: false }, function (err, data) {//part#2 point #9
         if (err) {
             res.json({ status: "Failed" });
         }

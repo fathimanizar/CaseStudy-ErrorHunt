@@ -97,7 +97,7 @@ authorsRouter.post('/edit', function (req, res) {
 //router to update author
 authorsRouter.post('/update', function (req, res) {
 
-    authordata.findOneAndUpdate(req.body.id, { $set: req.body },{ new: true, useFindAndModify: false }, function (err, data) {
+    authordata.findOneAndUpdate(req.body.id, { $set: req.body },{ new: true, useFindAndModify: false }, function (err, data) {//part#2 point #9
         if (err) {
             res.json({ status: "Failed" });
         }
